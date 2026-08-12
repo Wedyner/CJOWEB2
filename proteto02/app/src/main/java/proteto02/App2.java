@@ -1,3 +1,5 @@
+package proteto02;
+
 import java.util.Scanner;
 
 
