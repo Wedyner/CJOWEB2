@@ -4,11 +4,24 @@
 package project03;
 
 public class App {
-    public String getGreeting() {
-        return "Hello World!";
-    }
+    public static void main(String[] args) throws Exception {
+        BankAccount account = new BankAccount(1, "Wedyner Maciel", 0);
+        account.displaiDetails();
+        account.setId(1);
+        account.setclientName( "Wedyner Maciel");
+        account.setbalance(1000);
+        System.out.println("codigo: " + account.getId());
+        System.out.println("Nome Cliente " + account.getclientName());
+        System.out.println("Saldo: R$ %.2f\n " + account.getbalance());
+        account.deposit(1000);
+        account.displaiDetails();
+        account.withdraw(500);
+        account.displaiDetails();
 
-    public static void main(String[] args) {
-        System.out.println(new App().getGreeting());
+
+        BankAccount account2 = new BankAccount(3, "Rodrigo maciel", 300);
+        account2.deposit(300);
+        account2.displaiDetails();
+        System.out.println(account2);
     }
 }
