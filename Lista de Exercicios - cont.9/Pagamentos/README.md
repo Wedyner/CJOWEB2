@@ -1,18 +1,24 @@
 ## Getting Started
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Projeto de fixação da disciplina **Desenvolvimento Web 2 (CJOWEB2)** —
+Curso Superior de Tecnologia em Análise e Desenvolvimento de Sistemas.
+
+### Exercício — Conteúdo 09
+
+Sistema que calcula taxas e processa pagamentos por **Pix**, **Cartão de Crédito**
+e **Boleto Bancário** usando herança e polimorfismo.
 
 ## Folder Structure
 
-The workspace contains two folders by default, where:
+- `src`: código-fonte
+- `lib`: dependências
+- `bin`: saída compilada
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## Como executar
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+Abra a classe `GerenciadorVendas` (pacote `view`) e execute com o botão
+**Run Java** do VS Code, ou via terminal:
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+```bash
+javac -d bin $(find src -name "*.java")
+java -cp bin br.edu.ifspcjo.ads.web2.pagamentos.view.GerenciadorVendas
